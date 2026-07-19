@@ -146,6 +146,13 @@
   .field-value a{color:var(--ink);font-weight:600;border-bottom:1px solid var(--ink);}
   .field-value a:hover{color:var(--accent);border-color:var(--accent);}
 
+  /* Artifact section divider */
+  .artifact-block-tag{
+    font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.08em;
+    text-transform:uppercase;margin-top:64px;margin-bottom:12px;
+  }
+  .artifact-block-tag:first-of-type{margin-top:0;}
+
   /* FOOTER */
   footer{padding:56px 0 80px;}
   .footer-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
@@ -242,9 +249,10 @@
 <section id="artifacts">
   <div class="wrap">
     <div class="section-tag reveal">Selected Work</div>
-    <h2 class="section-title reveal">Artifact 01</h2>
-    <p class="section-lead reveal">An AI Lab case study from tool evaluation to a deployed, tested chatbot.</p>
+    <h2 class="section-title reveal">Artifacts</h2>
+    <p class="section-lead reveal">Two artifacts from my coursework that together show the range of skills applied AI/ML work requires: building and testing a deployed AI product, and communicating technical ML concepts clearly to a live audience.</p>
 
+    <div class="artifact-block-tag reveal">Artifact 01</div>
     <div class="artifact-card reveal">
       <div class="artifact-top">
         <div>
@@ -305,6 +313,80 @@
         </div>
       </div>
     </div>
+
+    <div class="artifact-block-tag reveal">Artifact 02</div>
+    <div class="artifact-card reveal">
+      <div class="artifact-top">
+        <div>
+          <div class="artifact-title">Types of Machine Learning (Group Presentation)</div>
+          <div class="artifact-sub">Group Presentation</div>
+        </div>
+        <div class="chips">
+          <span class="chip">PowerPoint</span>
+          <span class="chip">Group Collaboration</span>
+          <span class="chip">In-Class Presentation</span>
+        </div>
+      </div>
+
+      <div class="field-grid">
+        <div class="field-row">
+          <div class="field-label">Introduction</div>
+          <p class="field-value">This artifact documents a group presentation I delivered on campus with three teammates. Our topic was the four core types of machine learning, and the goal was to break down a technical subject into something a non-expert audience could actually follow and engage with.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Description</div>
+          <p class="field-value">As a group of four, we built and delivered a 16-slide presentation covering supervised, unsupervised, reinforcement, and self/semi-supervised learning. Rather than just defining each type, we grounded every concept in an everyday analogy (studying with an answer key, sorting Lego by color, training a puppy with treats, fill-in-the-blank practice), walked through a real case study on an AI system used to detect eye disease, and closed with an open discussion on accountability and ethics in ML.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Objective</div>
+          <p class="field-value">To take a technical ML concept and make it accessible to a mixed audience, while practicing how to present as a team, handle audience questions in real time, and connect classroom theory to real-world use and consequences.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Process</div>
+          <p class="field-value">My teammates and I split the four ML types across the group, then worked together on the shared framing (the "everyday example" structure) so the presentation felt consistent instead of four disconnected sections stitched together. I focused on translating the more abstract material reinforcement learning and the ethics section into plain language and researched the case study we used to ground the ethics discussion in something concrete instead of hypothetical. We rehearsed as a group beforehand, which is where we caught that our transition between conceptual foundation and the technical breakdown moved too fast for a first-time audience.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Tools &amp; Tech</div>
+          <p class="field-value">PowerPoint, group collaboration/rehearsal, in-person presentation delivery, audience Q&amp;A.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Value Proposition</div>
+          <div>
+            <p class="field-value"><strong>Unique value:</strong> this artifact shows a different skill set than my chatbot project communicating a technical concept clearly to a live audience, collaborating as part of a team, and adapting in real time to questions, rather than iterating alone against a written test plan.</p>
+            <p class="field-value"><strong>Relevance:</strong> for an evaluator assessing applied AI/ML competency, this demonstrates that I can explain foundational ML concepts in an accessible way and work effectively within a team, which matters just as much as the technical building skills shown in Artifact 1.</p>
+          </div>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Customization for the Audience</div>
+          <p class="field-value">Since our classmates weren't all coming in with the same technical background, we leaned hard on plain-language analogies instead of jargon, and used the eye-disease case study to make the ethics section feel real rather than abstract. We deliberately kept a summary table near the end so people who lost the thread on any one type could still walk away with the big picture.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Lessons Learned</div>
+          <p class="field-value">Presenting this taught me that understanding a concept well enough to explain it out loud is a different skill than understanding it well enough to answer a quiz question. When a classmate asked why self-supervised learning needs so much data compared to supervised learning, I realized my own explanation had been a little fuzzy on that point until I had to defend it live. Group presenting also meant learning to hand off cleanly between sections without losing the audience's attention in the gaps.</p>
+        </div>
+        <div class="field-divider"></div>
+
+        <div class="field-row">
+          <div class="field-label">Feedback &amp; Revisions</div>
+          <p class="field-value">The clearest feedback came from our own rehearsal: we noticed our jump from the "what is ML" intro into the four technical types felt abrupt, so we added a short bridging slide to slow that transition down. During the actual presentation, a couple of the discussion questions we posed at the end (like who's responsible when an AI makes a mistake) sparked more debate than we expected, which told us that section landed the way we wanted even though it wasn't something we could fully plan for in advance.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
