@@ -116,18 +116,36 @@
   .prop-card h3{font-size:19px;margin:10px 0 12px;font-weight:600;}
   .prop-card p{font-size:15px;line-height:1.65;color:var(--muted);margin:0;}
 
-  /* ARTIFACT / WORK */
-  .artifact-card{
+  /* ARTIFACT / WORK — accordion */
+  .artifact-accordion{margin-top:40px;display:flex;flex-direction:column;gap:16px;}
+  .artifact-item{
     background:var(--card);border:1px solid var(--line);border-radius:20px;
-    padding:40px;margin-top:40px;
+    overflow:hidden;
   }
-  .artifact-top{
-    display:flex;justify-content:space-between;align-items:flex-start;gap:24px;
-    flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid var(--line);margin-bottom:28px;
+  .artifact-summary{
+    display:flex;align-items:center;gap:20px;
+    padding:26px 32px;cursor:pointer;list-style:none;
+    -webkit-tap-highlight-color:transparent;
   }
-  .artifact-title{font-size:26px;font-weight:600;max-width:32ch;}
-  .artifact-sub{color:var(--accent);font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;}
-  .chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
+  .artifact-summary::-webkit-details-marker{display:none;}
+  .artifact-summary::marker{content:"";}
+  .artifact-num{
+    font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--accent);
+    border:1px solid var(--line);border-radius:50%;width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .artifact-summary-text{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0;}
+  .artifact-title{font-size:20px;font-weight:600;}
+  .artifact-sub{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+  .artifact-chevron{
+    font-size:22px;font-weight:400;color:var(--muted);flex-shrink:0;
+    transition:transform .3s ease;
+  }
+  details[open] > .artifact-summary .artifact-chevron{transform:rotate(45deg);}
+  .artifact-summary:hover .artifact-num{border-color:var(--accent);}
+  .artifact-body{padding:0 32px 36px;border-top:1px solid var(--line);}
+  .artifact-body-inner{padding-top:28px;}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;}
   .chip{
     font-size:12px;font-weight:600;background:var(--bg);border:1px solid var(--line);
     padding:6px 12px;border-radius:100px;color:var(--muted);
@@ -145,13 +163,6 @@
   .field-divider{grid-column:1/-1;height:1px;background:var(--line);margin:4px 0;}
   .field-value a{color:var(--ink);font-weight:600;border-bottom:1px solid var(--ink);}
   .field-value a:hover{color:var(--accent);border-color:var(--accent);}
-
-  /* Artifact section divider */
-  .artifact-block-tag{
-    font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.08em;
-    text-transform:uppercase;margin-top:64px;margin-bottom:12px;
-  }
-  .artifact-block-tag:first-of-type{margin-top:0;}
 
   /* FOOTER */
   footer{padding:56px 0 80px;}
@@ -252,20 +263,24 @@
     <h2 class="section-title reveal">Artifacts</h2>
     <p class="section-lead reveal">Two artifacts from my coursework that together show the range of skills applied AI/ML work requires: building and testing a deployed AI product, and communicating technical ML concepts clearly to a live audience.</p>
 
-    <div class="artifact-block-tag reveal">Artifact 01</div>
-    <div class="artifact-card reveal">
-      <div class="artifact-top">
-        <div>
-          <div class="artifact-title">Building an AI-Powered Bakery Customer Assistant</div>
-          <div class="artifact-sub">AI Lab Case Study </div>
-        </div>
+    <div class="artifact-accordion">
+    <details class="artifact-item reveal">
+      <summary class="artifact-summary">
+        <span class="artifact-num">1</span>
+        <span class="artifact-summary-text">
+          <span class="artifact-title">Building an AI-Powered Bakery Customer Assistant</span>
+          <span class="artifact-sub">AI Lab Case Study</span>
+        </span>
+        <span class="artifact-chevron">+</span>
+      </summary>
+      <div class="artifact-body">
+      <div class="artifact-body-inner">
         <div class="chips">
           <span class="chip">ChatGPT</span>
           <span class="chip">Custom GPT</span>
           <span class="chip">STORM AI</span>
           <span class="chip">Chatbase</span>
         </div>
-      </div>
 
       <div class="field-grid">
         <div class="field-row">
@@ -312,21 +327,26 @@
           <p class="field-value">Chatbase bot: <a href="https://www.chatbase.co/chatbot-iframe/Uoa0RdVzYx0BLbblyIDEO" target="_blank" rel="noopener">chatbase.co/chatbot-iframe/Uoa0RdVzYx0BLbblyIDEO ↗</a></p>
         </div>
       </div>
-    </div>
+      </div>
+      </div>
+    </details>
 
-    <div class="artifact-block-tag reveal">Artifact 02</div>
-    <div class="artifact-card reveal">
-      <div class="artifact-top">
-        <div>
-          <div class="artifact-title">Types of Machine Learning (Group Presentation)</div>
-          <div class="artifact-sub">Group Presentation</div>
-        </div>
+    <details class="artifact-item reveal">
+      <summary class="artifact-summary">
+        <span class="artifact-num">2</span>
+        <span class="artifact-summary-text">
+          <span class="artifact-title">Types of Machine Learning (Group Presentation)</span>
+          <span class="artifact-sub">Group Presentation</span>
+        </span>
+        <span class="artifact-chevron">+</span>
+      </summary>
+      <div class="artifact-body">
+      <div class="artifact-body-inner">
         <div class="chips">
           <span class="chip">PowerPoint</span>
           <span class="chip">Group Collaboration</span>
           <span class="chip">In-Class Presentation</span>
         </div>
-      </div>
 
       <div class="field-grid">
         <div class="field-row">
@@ -385,6 +405,9 @@
           <p class="field-value">The clearest feedback came from our own rehearsal: we noticed our jump from the "what is ML" intro into the four technical types felt abrupt, so we added a short bridging slide to slow that transition down. During the actual presentation, a couple of the discussion questions we posed at the end (like who's responsible when an AI makes a mistake) sparked more debate than we expected, which told us that section landed the way we wanted even though it wasn't something we could fully plan for in advance.</p>
         </div>
       </div>
+      </div>
+      </div>
+    </details>
     </div>
 
   </div>
